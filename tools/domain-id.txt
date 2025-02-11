@@ -1,0 +1,6 @@
+_generic_code_domain 0x746d6354f4f733e9
+_posix_code_domain 0xa59a56fe5f310933
+_win32_code_domain 0x8cd18ee72d680f1b
+_nt_code_domain 0x93f3b4487e4af25b
+indirecting_domain 0xc44f7bdeb2cc50e9 ^ anoother status code domain id
+_std_error_code_domain 0x223a160d20de97b4 ^ std::error_category address
