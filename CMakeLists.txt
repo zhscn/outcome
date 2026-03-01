@@ -21,8 +21,8 @@ target_compile_definitions(outcome_exception INTERFACE OUTCOME_ENABLE_EXCEPTION)
 target_link_libraries(outcome_exception INTERFACE outcome)
 
 install(
-  DIRECTORY include/
-  DESTINATION include/outcome
+  DIRECTORY include/outcome
+  DESTINATION include
   FILES_MATCHING PATTERN "*.hpp"
 )
 
