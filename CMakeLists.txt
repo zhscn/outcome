@@ -10,26 +10,13 @@ target_include_directories(
   $<INSTALL_INTERFACE:include>
 )
 
-add_library(outcome_std_error_code INTERFACE)
-add_library(outcome::std_error_code ALIAS outcome_std_error_code)
-target_compile_definitions(outcome_std_error_code INTERFACE OUTCOME_ENABLE_STD_ERROR_CODE)
-target_link_libraries(outcome_std_error_code INTERFACE outcome)
-
-add_library(outcome_exception INTERFACE)
-add_library(outcome::exception ALIAS outcome_exception)
-target_compile_definitions(outcome_exception INTERFACE OUTCOME_ENABLE_EXCEPTION)
-target_link_libraries(outcome_exception INTERFACE outcome)
-
 install(
   DIRECTORY include/outcome
   DESTINATION include
   FILES_MATCHING PATTERN "*.hpp"
 )
 
-install(
-  TARGETS outcome outcome_std_error_code outcome_exception
-  EXPORT outcomeTargets
-)
+install(TARGETS outcome EXPORT outcomeTargets)
 
 install(
   EXPORT outcomeTargets
